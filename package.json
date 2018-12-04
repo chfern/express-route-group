@@ -1,6 +1,6 @@
 {
   "name": "express-route-group",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Express helper to group routes by prefix",
   "main": "Route.js",
   "scripts": {
@@ -17,6 +17,7 @@
   "author": "Fernando Christyanto",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "multer": "^1.4.1"
   }
 }
