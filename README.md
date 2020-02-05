@@ -83,20 +83,20 @@ Try starting the webserver then go to localhost:8081/test/helloworld, you should
 const Route = require('express-route-group');
 
 module.exports.registerRoutes = function(app) {
-  app.use('/test',
+  app.use('/v1',
     Route.routes([
-        Route.get('/helloworld', async (req, res, next) => {
+        Route.get('/todos', async (req, res, next) => {
           res.send({ 'message': 'Hello World!' });
         })
     ]));
 
-  app.use('/secondgroup',
+  app.use('/v2',
     Route.routes([
-        Route.get('/helloworld', async (req, res, next) => {
+        Route.get('/todos', async (req, res, next) => {
           res.send({ 'message': 'Hello World!' });
         }),
-        Route.get('/helloworldagain', async (req, res, next) => {
-          res.send({ 'message': 'Hello World Again!' });
+        Route.get('/todos/:id', async (req, res, next) => {
+          res.send({ 'message': 'Hello World!' });
         })
     ]));
 }
